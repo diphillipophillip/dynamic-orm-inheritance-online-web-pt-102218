@@ -43,6 +43,7 @@ require 'pry'
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
+    binding.pry
   end
 
   def col_names_for_insert
