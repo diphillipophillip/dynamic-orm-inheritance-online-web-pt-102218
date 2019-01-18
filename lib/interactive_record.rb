@@ -43,11 +43,11 @@ require 'pry'
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
-    binding.pry
   end
 
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
+    binding.pry
   end
 
   def self.find_by_name(name)
