@@ -17,7 +17,6 @@ require 'pry'
     column_names = []
     table_info.each do |row|
       column_names << row["name"]
-      binding.pry
     end
     column_names.compact
   end
@@ -25,6 +24,7 @@ require 'pry'
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
+      binding.pry
     end
   end
 
